@@ -26,27 +26,41 @@ public class ArrayAverage {
 	 * 
 	 * @param args
 	 */
+	public static void average() {
+		double average = 0;
+		Scanner console = new Scanner(System.in);
+		System.out.println("How many ints to average?");
+		int arr[]= new int [console.nextInt()];		
+		for(int i = 0; i<arr.length;i++){
+			arr[i]=console.nextInt();
+			average+=arr[i];
+		}			
+		System.out.println(average/arr.length);
+		console.close();
+	}
+	
 	public static void main(String[] args) {
+		//Static method
+		average();
+		
+		//main class method
 		int ArraySize;
 		double average = 0;
-
 		//Creating a scanner to read input from console
 		Scanner console = new Scanner(System.in);
 		System.out.println("How many ints to average?");
 		ArraySize = console.nextInt();
-		
+	
 		// TODO -- define an array
-				
+		int arr[]= new int [ArraySize];		
 		// TODO -- write a for loop here to ask the user for input.
-
-		//for(something){
-		//
-		//}
-		
+		for(int i = 0; i<ArraySize;i++){
+			arr[i]=console.nextInt();
+			average+=arr[i];
+		}		
 		// TODO -- average across the array
-		//average = ???; 
 		
-		System.out.println(average);
+		System.out.println(average/ArraySize);
 		
 		//Closing the scanner
 		console.close();
