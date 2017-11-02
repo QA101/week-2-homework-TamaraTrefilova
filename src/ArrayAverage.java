@@ -35,13 +35,13 @@ public class ArrayAverage {
 			arr[i]=console.nextInt();
 			average+=arr[i];
 		}			
-		System.out.println(average/arr.length);
+		System.out.println("Your average is "+average/arr.length);
 		console.close();
 	}
 	
 	public static void main(String[] args) {
 		//Static method
-		average();
+//		average();
 		
 		//main class method
 		int ArraySize;
